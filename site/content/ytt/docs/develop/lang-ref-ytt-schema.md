@@ -448,6 +448,7 @@ where:
     - equivalent to [@ytt:assert.max_len()](lang-ref-ytt-assert.md#assertmax_len)
   - `not_null=` (`bool`) — if set to `True`, the node's value must not be null.
     - equivalent to [@ytt:assert.not_null()](lang-ref-ytt-assert.md#assertnot_null)
+    - when present, this rule is checked before any other; this allows other rules (including custom rules) to assume the value is not null.
   - `one_not_null=` (`bool` | `list`) — exactly one item in a map is not null.
     - the node's value must be a map
     - if a list of keys are given, only those keys are considered
